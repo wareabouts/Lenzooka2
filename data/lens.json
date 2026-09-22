@@ -3412,8 +3412,7 @@
       ],
       "question": "Which physical board carries which stencil number? I assigned B3 top-left, B4 top-right, B2 bottom-left, B1 bottom-right by component type. Please confirm from the number printed near each card edge.",
       "status": "open",
-      "created": "2026-09-22T08:26:48.114927+00:00",
-      "tour": true
+      "created": "2026-09-22T08:26:48.114927+00:00"
     },
     {
       "id": "vr-002",
@@ -3458,6 +3457,181 @@
       "question": "The toroid is marked 240V. Is that a primary tap (mains into the lens) or a secondary? Trace the toroid leads to the fuse block and to CAM50 before any power goes on.",
       "status": "open",
       "created": "2026-09-22T08:26:48.114927+00:00"
+    },
+    {
+      "id": "tour-01",
+      "from": "alex",
+      "camera": {
+        "position": [
+          -550,
+          370,
+          900
+        ],
+        "target": [
+          0,
+          0,
+          260
+        ]
+      },
+      "highlight": [
+        "BODY"
+      ],
+      "question": "The lens, opened up",
+      "answer": "A 1979 Fujinon P14x16.5 studio zoom. This atlas connects the physical compartments to the photographs and continuity measurements. The body dimensions and object poses are provisional.",
+      "status": "answered",
+      "created": "2026-09-22T09:00:00Z",
+      "tour": true
+    },
+    {
+      "id": "tour-02",
+      "from": "alex",
+      "camera": {
+        "position": [
+          -350,
+          130,
+          620
+        ],
+        "target": [
+          -122,
+          0,
+          200
+        ]
+      },
+      "highlight": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "question": "The four door boards",
+      "answer": "Fuji names these boards \u00b113V REG, IRIS AMP, EXT SET SIG GEN and DIGITAL CMPR. Their physical board-to-number assignments remain hypotheses pending stencil confirmation.",
+      "status": "answered",
+      "created": "2026-09-22T09:00:00Z",
+      "tour": true
+    },
+    {
+      "id": "tour-03",
+      "from": "alex",
+      "camera": {
+        "position": [
+          -240,
+          90,
+          550
+        ],
+        "target": [
+          -100,
+          -40,
+          200
+        ]
+      },
+      "highlight": [
+        "B5",
+        "CN105"
+      ],
+      "question": "The system board",
+      "answer": "B5 carries op-amp cans, trimmers and yellow jumpers. CN105 is the blue/red edge connector. Zoom and focus servo functions are inferred, not measured.",
+      "status": "answered",
+      "created": "2026-09-22T09:00:00Z",
+      "tour": true
+    },
+    {
+      "id": "tour-04",
+      "from": "alex",
+      "camera": {
+        "position": [
+          -100,
+          200,
+          480
+        ],
+        "target": [
+          -100,
+          120,
+          180
+        ]
+      },
+      "highlight": [
+        "B7"
+      ],
+      "question": "A labelled starting point",
+      "answer": "The terminal board exposes labelled signal and power pads, including ZOOM RATE and POWER RET. It is a useful anchor for recording unpowered continuity sweeps.",
+      "status": "answered",
+      "created": "2026-09-22T09:00:00Z",
+      "tour": true
+    },
+    {
+      "id": "tour-05",
+      "from": "alex",
+      "camera": {
+        "position": [
+          130,
+          50,
+          220
+        ],
+        "target": [
+          60,
+          -60,
+          -5
+        ]
+      },
+      "highlight": [
+        "CAM50"
+      ],
+      "question": "The camera connection",
+      "answer": "CAM50 is the rear camera connector. Its pinout is unknown and the grid shown here is a placeholder that must be corrected against the physical keyway and numbering.",
+      "status": "answered",
+      "created": "2026-09-22T09:00:00Z",
+      "tour": true
+    },
+    {
+      "id": "tour-06",
+      "from": "alex",
+      "camera": {
+        "position": [
+          480,
+          180,
+          580
+        ],
+        "target": [
+          105,
+          0,
+          200
+        ]
+      },
+      "highlight": [
+        "PU",
+        "BAY-R"
+      ],
+      "question": "The power unit",
+      "answer": "The power unit includes fuses, a toroidal transformer and large capacitors. The meaning of the 240V marking and the primary wiring remain unresolved in the supplied register.",
+      "status": "answered",
+      "created": "2026-09-22T09:00:00Z",
+      "tour": true
+    },
+    {
+      "id": "tour-07",
+      "from": "alex",
+      "camera": {
+        "position": [
+          -330,
+          80,
+          730
+        ],
+        "target": [
+          0,
+          -40,
+          400
+        ]
+      },
+      "highlight": [
+        "B20",
+        "B21",
+        "B11"
+      ],
+      "question": "The front mechanism",
+      "answer": "The front bay includes the zoom cam barrel, motors, the LENS/CAMERA switch board and a narrow sensor board. Use the photographs to distinguish observed labels from inferred functions.",
+      "status": "answered",
+      "created": "2026-09-22T09:00:00Z",
+      "tour": true
     }
   ]
 }
