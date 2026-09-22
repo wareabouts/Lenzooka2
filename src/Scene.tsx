@@ -282,7 +282,15 @@ function Camera() {
       camera.position.lerpVectors(f.from, f.to, ease);
       controls.current.target.lerpVectors(f.target, f.dest, ease);
       controls.current.update();
-      if (t === 1) flight.current = null;
+      if (t === 1) {
+        flight.current = null;
+        s.set({
+          camera: {
+            position: camera.position.toArray(),
+            target: controls.current.target.toArray(),
+          },
+        });
+      }
     }
   });
   return (

@@ -1683,3 +1683,24 @@ kbd {
   line-height: 1.8;
   color: #7d8a75;
 }
+.probe-panel {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+}
+.tree-item strong {
+  font-size: 11px;
+}
+.tree-item > span:last-child {
+  font-size: 11px;
+}
+.notes-card p,
+.request-card p,
+.field input,
+.field select,
+.field textarea {
+  font-size: 12px;
+}
+.badge {
+  font-size: 9px;
+}

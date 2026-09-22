@@ -11,8 +11,11 @@ export default defineConfig({
     {
       name: "bench-persistence",
       configureServer(server) {
+        const dataPath = path.join(server.config.root, "data/lens.json");
+        const photosPath = path.join(server.config.root, "public/photos");
         server.middlewares.use(async (req, res, next) => {
           const send = (code: number, value: unknown) => {
+            if (res.writableEnded) return;
             res.statusCode = code;
             res.setHeader("Content-Type", "application/json");
             res.end(JSON.stringify(value));
@@ -23,7 +26,7 @@ export default defineConfig({
           ) {
             res.setHeader("Content-Type", "application/json");
             try {
-              res.end(await fs.readFile("data/lens.json"));
+              res.end(await fs.readFile(dataPath));
             } catch {
               send(404, {
                 error: "Restore data/lens.json from your backup, then reload.",
@@ -48,10 +51,10 @@ export default defineConfig({
                     a.id.localeCompare(b.id),
                   );
               await fs.writeFile(
-                "data/lens.json.tmp",
+                dataPath + ".tmp",
                 JSON.stringify(data, null, 2) + "\n",
               );
-              await fs.rename("data/lens.json.tmp", "data/lens.json");
+              await fs.rename(dataPath + ".tmp", dataPath);
               send(200, { saved: true });
             } catch (e) {
               send(400, { error: String(e) });
@@ -82,18 +85,17 @@ export default defineConfig({
                   let id = stem;
                   for (let i = 1; ; i++) {
                     try {
-                      await fs.access(path.join("public/photos", id + ".jpg"));
+                      await fs.access(path.join(photosPath, id + ".jpg"));
                       id = stem + "-" + i;
                     } catch {
                       break;
                     }
                   }
-                  await fs.writeFile(
-                    path.join("public/photos", id + ".jpg"),
-                    b,
-                  );
+                  await fs.writeFile(path.join(photosPath, id + ".jpg"), b);
                   return { id, file: `photos/${id}.jpg` };
                 })();
+                // Observe rejection immediately; the close handler returns the error to the client.
+                void result.catch(() => {});
               });
               bb.on("close", async () => {
                 try {
@@ -118,6 +120,10 @@ export default defineConfig({
           next();
         });
       },
+    },
+    {
+      name: "exhibit-data",
+      apply: "build",
       async closeBundle() {
         await fs.mkdir("dist/data", { recursive: true });
         await fs.copyFile("data/lens.json", "dist/data/lens.json");
