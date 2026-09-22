@@ -1,0 +1,1 @@
+body{margin:0;background:#f5f6f2;color:#253a37;font-family:Arial,sans-serif}header{display:flex;align-items:center;gap:25px;padding:18px 25px}button{cursor:pointer}.scene-label{background:#fff;border:1px solid #ced7d2;border-radius:4px;font:10px monospace;padding:3px 5px}.scene-label.active{background:#177b6f;color:white}.scene-label span{display:block}

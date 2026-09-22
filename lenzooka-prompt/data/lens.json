@@ -1,0 +1,3463 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "units": "mm",
+    "frame": "operator: origin rear mount, +Z front, +Y up, +X operator right",
+    "updated": "2026-09-22T08:26:48.114927+00:00"
+  },
+  "compartments": [
+    {
+      "id": "BODY",
+      "label": "Lens housing",
+      "pose": {
+        "position": [
+          0,
+          0,
+          260
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        250,
+        300,
+        520
+      ],
+      "status": "GUESS",
+      "notes": "Overall envelope, tape-measure it."
+    },
+    {
+      "id": "OPTICS",
+      "label": "Optical path",
+      "shape": "cylinder",
+      "pose": {
+        "position": [
+          0,
+          40,
+          260
+        ],
+        "rotation": [
+          1.5708,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        120,
+        520,
+        120
+      ],
+      "status": "GUESS",
+      "notes": "Cylinder along Z; zoom cam barrel with 16.5/170/230 scale lives in the front half (photo 065246)."
+    },
+    {
+      "id": "DOOR-L",
+      "label": "Door, operator left (SYSTEM UNIT 338A)",
+      "pose": {
+        "position": [
+          -135,
+          0,
+          200
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        260,
+        300
+      ],
+      "status": "PHOTO",
+      "notes": "Hinged panel carrying B1-B4 on 5409.78 card edges. Silkscreen map on inside is rotated 180 deg relative to photo 065650."
+    },
+    {
+      "id": "BAY-L",
+      "label": "Left bay, behind door",
+      "pose": {
+        "position": [
+          -95,
+          0,
+          200
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        60,
+        260,
+        300
+      ],
+      "status": "PHOTO",
+      "notes": "B5 system board, B6, B7 terminal board, B8/B9 power transistors, harness trunk."
+    },
+    {
+      "id": "BAY-R",
+      "label": "Right bay (POWER UNIT 110A)",
+      "pose": {
+        "position": [
+          105,
+          0,
+          200
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        70,
+        260,
+        300
+      ],
+      "status": "PHOTO",
+      "notes": "Fuses F1-F4 + spares, toroid 16V/240V/25V, can caps, EXT AUTO-MANU and LAMP ON-OFF toggles."
+    },
+    {
+      "id": "BAY-F",
+      "label": "Front bay (zoom barrel, motors, sensor boards)",
+      "pose": {
+        "position": [
+          0,
+          -40,
+          400
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        230,
+        220,
+        200
+      ],
+      "status": "PHOTO",
+      "notes": "Photo 065246. LENS/CAMERA toggle board (B20), barrel sensor board (B21), brass motor and pots."
+    },
+    {
+      "id": "BOTTOM",
+      "label": "Bottom (not yet photographed)",
+      "pose": {
+        "position": [
+          0,
+          -140,
+          260
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        250,
+        30,
+        520
+      ],
+      "status": "GUESS",
+      "notes": "Alex: more connectors here. Place and photograph."
+    }
+  ],
+  "objects": [
+    {
+      "id": "B1",
+      "kind": "board",
+      "label": "+/-13V regulator",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          -80,
+          130
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        140,
+        2
+      ],
+      "status": "GUESS",
+      "fujiName": "\u00b113V REG",
+      "notes": "Relays RL1/RL2 (7921), diodes D1-D8, 4x 100uF, two TO-220.",
+      "faceTexture": "065541"
+    },
+    {
+      "id": "B10",
+      "kind": "assembly",
+      "label": "Turret motor assembly",
+      "compartment": "BAY-F",
+      "pose": {
+        "position": [
+          40,
+          -60,
+          380
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        40,
+        40,
+        60
+      ],
+      "status": "GUESS",
+      "fujiName": "TURRET MOTOR ASSY",
+      "notes": "Not yet identified in photos. Suggests ES variant with 2x extender turret."
+    },
+    {
+      "id": "B11",
+      "kind": "assembly",
+      "label": "Iris motor assembly",
+      "compartment": "BAY-F",
+      "pose": {
+        "position": [
+          30,
+          -100,
+          330
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        30,
+        30,
+        50
+      ],
+      "status": "PHOTO",
+      "fujiName": "IRIS MOTOR ASSY",
+      "notes": "Brass motor at the bottom of the zoom barrel (photo 065307)."
+    },
+    {
+      "id": "B12",
+      "kind": "switch",
+      "label": "Turret auto/manual switch",
+      "compartment": "BAY-R",
+      "pose": {
+        "position": [
+          120,
+          100,
+          150
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        20,
+        10
+      ],
+      "status": "GUESS",
+      "fujiName": "TURRET AUTO-MANU SW",
+      "notes": "May be the EXT AUTO-MANU toggle on the power unit."
+    },
+    {
+      "id": "B13",
+      "kind": "switch",
+      "label": "Pattern projector enable switch",
+      "compartment": "BAY-R",
+      "pose": {
+        "position": [
+          120,
+          100,
+          120
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        20,
+        10
+      ],
+      "status": "GUESS",
+      "fujiName": "P.J ENABLE SW",
+      "notes": "May be the LAMP ON-OFF toggle on the power unit."
+    },
+    {
+      "id": "B2",
+      "kind": "board",
+      "label": "Iris amplifier",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          -80,
+          270
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        140,
+        2
+      ],
+      "status": "GUESS",
+      "fujiName": "IRIS AMP",
+      "notes": "JRC 4558D, quad op-amp, VR1-4, two TO-220 outputs.",
+      "faceTexture": "065548"
+    },
+    {
+      "id": "B20",
+      "kind": "board",
+      "label": "LENS / CAMERA switch board",
+      "compartment": "BAY-F",
+      "pose": {
+        "position": [
+          -90,
+          -60,
+          360
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        40,
+        70,
+        2
+      ],
+      "status": "PHOTO",
+      "notes": "IC1, D1-D4, R1-R3, VR1, toggle LENS/CAMERA (photo 065307).",
+      "faceTexture": "065307"
+    },
+    {
+      "id": "B21",
+      "kind": "board",
+      "label": "Barrel sensor board",
+      "compartment": "BAY-F",
+      "pose": {
+        "position": [
+          95,
+          0,
+          380
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        30,
+        180,
+        2
+      ],
+      "status": "PHOTO",
+      "notes": "Long narrow board beside the zoom barrel (photo 065246)."
+    },
+    {
+      "id": "B3",
+      "kind": "board",
+      "label": "Ext set signal generator",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          70,
+          270
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        140,
+        2
+      ],
+      "status": "GUESS",
+      "fujiName": "EXT SET SIG GEN",
+      "notes": "12 CMOS DIPs (MC14011B, MC14001B, MC14002B, CD4071BE). Board-number assignment is a hypothesis; confirm from stencil at card edge.",
+      "faceTexture": "065524"
+    },
+    {
+      "id": "B4",
+      "kind": "board",
+      "label": "Digital comparator",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          70,
+          130
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        140,
+        2
+      ],
+      "status": "GUESS",
+      "fujiName": "DIGITAL CMPR",
+      "notes": "CMOS + trimpots VR1-3 (MC14070B, MC14016B).",
+      "faceTexture": "065529"
+    },
+    {
+      "id": "B5",
+      "kind": "board",
+      "label": "System board (zoom/focus servo)",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -40,
+          200
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        150,
+        200,
+        2
+      ],
+      "status": "PHOTO",
+      "fujiName": "SYSTEM BOARD",
+      "notes": "OP-05 cans, OP-02, AD7512DIKN, VR1-VR17, T1-T32. Blue/red edge connector = CN105.",
+      "faceTexture": "065441"
+    },
+    {
+      "id": "B6",
+      "kind": "board",
+      "label": "Power regulator PC board",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          90,
+          270
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        90,
+        60,
+        2
+      ],
+      "status": "PHOTO",
+      "fujiName": "POWER REG PC BOARD",
+      "notes": "Small board on 5403.793 socket, 4 trimpots, two 14-pin DIPs.",
+      "faceTexture": "065430"
+    },
+    {
+      "id": "B6.edge",
+      "kind": "connector",
+      "label": "B6 card edge (5403.793)",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          60,
+          270
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        90,
+        10,
+        8
+      ],
+      "status": "PHOTO",
+      "notes": "15 fingers."
+    },
+    {
+      "id": "B7",
+      "kind": "board",
+      "label": "Terminal board",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          120,
+          180
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        200,
+        40,
+        2
+      ],
+      "status": "PHOTO",
+      "fujiName": "TERMINAL BOARD",
+      "notes": "Pads labelled with the camera interface signals (photo 065258).",
+      "faceTexture": "065258"
+    },
+    {
+      "id": "B8",
+      "kind": "assembly",
+      "label": "Power transistor assembly A",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -80,
+          60,
+          200
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        40,
+        80,
+        15
+      ],
+      "status": "PHOTO",
+      "fujiName": "POWER TR ASSY",
+      "notes": "Four screw-mounted transistors on black heatsink block."
+    },
+    {
+      "id": "B9",
+      "kind": "assembly",
+      "label": "Power transistor assembly B",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -80,
+          60,
+          150
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        40,
+        80,
+        15
+      ],
+      "status": "GUESS",
+      "fujiName": "POWER TR ASSY",
+      "notes": "Location unconfirmed."
+    },
+    {
+      "id": "CAM50",
+      "kind": "connector",
+      "label": "Rear 50-pin camera connector",
+      "compartment": "BODY",
+      "pose": {
+        "position": [
+          60,
+          -60,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        45,
+        30,
+        8
+      ],
+      "status": "PHOTO",
+      "notes": "Pinout unknown. Number pins with keyway at 12 o'clock, rows top to bottom, left to right; record the scheme used."
+    },
+    {
+      "id": "CN101",
+      "kind": "connector",
+      "label": "CN101",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          100,
+          100
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": "On silkscreen map near CN112 and CN105; location not yet found."
+    },
+    {
+      "id": "CN102",
+      "kind": "connector",
+      "label": "CN102",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          20,
+          100
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "CN103",
+      "kind": "connector",
+      "label": "CN103",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -60,
+          100
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "CN104",
+      "kind": "connector",
+      "label": "CN104",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -100,
+          150
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": "Near B6 on map."
+    },
+    {
+      "id": "CN105",
+      "kind": "connector",
+      "label": "System board edge connector (blue/red)",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -40,
+          120
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        10,
+        180,
+        8
+      ],
+      "status": "PHOTO",
+      "notes": "About 36 positions, double-sided."
+    },
+    {
+      "id": "CN106",
+      "kind": "connector",
+      "label": "Door card edge under B1",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          -160,
+          130
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        10,
+        8
+      ],
+      "status": "GUESS",
+      "notes": "5409.78 socket; 15 numbered + A-S lettered fingers. Board-to-CN mapping from silkscreen map, GUESS."
+    },
+    {
+      "id": "CN107",
+      "kind": "connector",
+      "label": "Door card edge under B2",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          -160,
+          270
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        10,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "CN108",
+      "kind": "connector",
+      "label": "Door card edge under B3",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          -10,
+          270
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        10,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "CN109",
+      "kind": "connector",
+      "label": "Door card edge under B4",
+      "compartment": "DOOR-L",
+      "pose": {
+        "position": [
+          -122,
+          -10,
+          130
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        110,
+        10,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "CN110",
+      "kind": "connector",
+      "label": "CN110",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -120,
+          260
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": "At terminal-board end on map."
+    },
+    {
+      "id": "CN111",
+      "kind": "connector",
+      "label": "CN111",
+      "compartment": "BOTTOM",
+      "pose": {
+        "position": [
+          0,
+          -140,
+          200
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": "Not on the map; possibly on the bottom."
+    },
+    {
+      "id": "CN112",
+      "kind": "connector",
+      "label": "CN112",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          120,
+          100
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        20,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "J101",
+      "kind": "connector",
+      "label": "J101",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -130,
+          110
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        15,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "J102",
+      "kind": "connector",
+      "label": "J102",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -60,
+          140
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        15,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "J103",
+      "kind": "connector",
+      "label": "J103",
+      "compartment": "BAY-L",
+      "pose": {
+        "position": [
+          -100,
+          -40,
+          290
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        15,
+        8,
+        8
+      ],
+      "status": "GUESS",
+      "notes": ""
+    },
+    {
+      "id": "PU",
+      "kind": "psu",
+      "label": "Power unit",
+      "compartment": "BAY-R",
+      "pose": {
+        "position": [
+          105,
+          0,
+          200
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "size": [
+        60,
+        250,
+        280
+      ],
+      "status": "PHOTO",
+      "fujiName": "POWER UNIT 110A",
+      "notes": "Toroid, fuses, cans, 1.8 ohm 2XL resistor, feed-through terminals."
+    }
+  ],
+  "pins": [
+    {
+      "id": "TB.-SIG_HT",
+      "object": "B7",
+      "label": "-SIG_HT",
+      "local": [
+        0.12,
+        0.62
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.SIG_COM",
+      "object": "B7",
+      "label": "SIG_COM",
+      "local": [
+        0.22999999999999998,
+        0.62
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.+SIG_HT",
+      "object": "B7",
+      "label": "+SIG_HT",
+      "local": [
+        0.33999999999999997,
+        0.62
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.IRIS_CONT",
+      "object": "B7",
+      "label": "IRIS_CONT",
+      "local": [
+        0.45,
+        0.62
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.ZOOM_RATE",
+      "object": "B7",
+      "label": "ZOOM_RATE",
+      "local": [
+        0.56,
+        0.62
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.ZOOM_IND",
+      "object": "B7",
+      "label": "ZOOM_IND",
+      "local": [
+        0.67,
+        0.62
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.FOCUS_RATE",
+      "object": "B7",
+      "label": "FOCUS_RATE",
+      "local": [
+        0.78,
+        0.62
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.-POWER_HT",
+      "object": "B7",
+      "label": "-POWER_HT",
+      "local": [
+        0.12,
+        0.82
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.POWER_RET",
+      "object": "B7",
+      "label": "POWER_RET",
+      "local": [
+        0.22999999999999998,
+        0.82
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.+POWER_HT",
+      "object": "B7",
+      "label": "+POWER_HT",
+      "local": [
+        0.33999999999999997,
+        0.82
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.IRIS_RESET",
+      "object": "B7",
+      "label": "IRIS_RESET",
+      "local": [
+        0.45,
+        0.82
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.ZOOM_RESET",
+      "object": "B7",
+      "label": "ZOOM_RESET",
+      "local": [
+        0.56,
+        0.82
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.FOCUS_RESET",
+      "object": "B7",
+      "label": "FOCUS_RESET",
+      "local": [
+        0.67,
+        0.82
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "TB.FOCUS_POS",
+      "object": "B7",
+      "label": "FOCUS_POS",
+      "local": [
+        0.78,
+        0.82
+      ],
+      "localSpace": "uv",
+      "notes": "Silkscreen, photo 065258"
+    },
+    {
+      "id": "CAM50.1",
+      "object": "CAM50",
+      "label": "1",
+      "local": [
+        0.05,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.2",
+      "object": "CAM50",
+      "label": "2",
+      "local": [
+        0.15000000000000002,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.3",
+      "object": "CAM50",
+      "label": "3",
+      "local": [
+        0.25,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.4",
+      "object": "CAM50",
+      "label": "4",
+      "local": [
+        0.35000000000000003,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.5",
+      "object": "CAM50",
+      "label": "5",
+      "local": [
+        0.45,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.6",
+      "object": "CAM50",
+      "label": "6",
+      "local": [
+        0.55,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.7",
+      "object": "CAM50",
+      "label": "7",
+      "local": [
+        0.6500000000000001,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.8",
+      "object": "CAM50",
+      "label": "8",
+      "local": [
+        0.7500000000000001,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.9",
+      "object": "CAM50",
+      "label": "9",
+      "local": [
+        0.8500000000000001,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.10",
+      "object": "CAM50",
+      "label": "10",
+      "local": [
+        0.9500000000000001,
+        0.1
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.11",
+      "object": "CAM50",
+      "label": "11",
+      "local": [
+        0.05,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.12",
+      "object": "CAM50",
+      "label": "12",
+      "local": [
+        0.15000000000000002,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.13",
+      "object": "CAM50",
+      "label": "13",
+      "local": [
+        0.25,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.14",
+      "object": "CAM50",
+      "label": "14",
+      "local": [
+        0.35000000000000003,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.15",
+      "object": "CAM50",
+      "label": "15",
+      "local": [
+        0.45,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.16",
+      "object": "CAM50",
+      "label": "16",
+      "local": [
+        0.55,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.17",
+      "object": "CAM50",
+      "label": "17",
+      "local": [
+        0.6500000000000001,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.18",
+      "object": "CAM50",
+      "label": "18",
+      "local": [
+        0.7500000000000001,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.19",
+      "object": "CAM50",
+      "label": "19",
+      "local": [
+        0.8500000000000001,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.20",
+      "object": "CAM50",
+      "label": "20",
+      "local": [
+        0.9500000000000001,
+        0.30000000000000004
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.21",
+      "object": "CAM50",
+      "label": "21",
+      "local": [
+        0.05,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.22",
+      "object": "CAM50",
+      "label": "22",
+      "local": [
+        0.15000000000000002,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.23",
+      "object": "CAM50",
+      "label": "23",
+      "local": [
+        0.25,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.24",
+      "object": "CAM50",
+      "label": "24",
+      "local": [
+        0.35000000000000003,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.25",
+      "object": "CAM50",
+      "label": "25",
+      "local": [
+        0.45,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.26",
+      "object": "CAM50",
+      "label": "26",
+      "local": [
+        0.55,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.27",
+      "object": "CAM50",
+      "label": "27",
+      "local": [
+        0.6500000000000001,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.28",
+      "object": "CAM50",
+      "label": "28",
+      "local": [
+        0.7500000000000001,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.29",
+      "object": "CAM50",
+      "label": "29",
+      "local": [
+        0.8500000000000001,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.30",
+      "object": "CAM50",
+      "label": "30",
+      "local": [
+        0.9500000000000001,
+        0.5
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.31",
+      "object": "CAM50",
+      "label": "31",
+      "local": [
+        0.05,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.32",
+      "object": "CAM50",
+      "label": "32",
+      "local": [
+        0.15000000000000002,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.33",
+      "object": "CAM50",
+      "label": "33",
+      "local": [
+        0.25,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.34",
+      "object": "CAM50",
+      "label": "34",
+      "local": [
+        0.35000000000000003,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.35",
+      "object": "CAM50",
+      "label": "35",
+      "local": [
+        0.45,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.36",
+      "object": "CAM50",
+      "label": "36",
+      "local": [
+        0.55,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.37",
+      "object": "CAM50",
+      "label": "37",
+      "local": [
+        0.6500000000000001,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.38",
+      "object": "CAM50",
+      "label": "38",
+      "local": [
+        0.7500000000000001,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.39",
+      "object": "CAM50",
+      "label": "39",
+      "local": [
+        0.8500000000000001,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.40",
+      "object": "CAM50",
+      "label": "40",
+      "local": [
+        0.9500000000000001,
+        0.7000000000000001
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.41",
+      "object": "CAM50",
+      "label": "41",
+      "local": [
+        0.05,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.42",
+      "object": "CAM50",
+      "label": "42",
+      "local": [
+        0.15000000000000002,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.43",
+      "object": "CAM50",
+      "label": "43",
+      "local": [
+        0.25,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.44",
+      "object": "CAM50",
+      "label": "44",
+      "local": [
+        0.35000000000000003,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.45",
+      "object": "CAM50",
+      "label": "45",
+      "local": [
+        0.45,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.46",
+      "object": "CAM50",
+      "label": "46",
+      "local": [
+        0.55,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.47",
+      "object": "CAM50",
+      "label": "47",
+      "local": [
+        0.6500000000000001,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.48",
+      "object": "CAM50",
+      "label": "48",
+      "local": [
+        0.7500000000000001,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.49",
+      "object": "CAM50",
+      "label": "49",
+      "local": [
+        0.8500000000000001,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CAM50.50",
+      "object": "CAM50",
+      "label": "50",
+      "local": [
+        0.9500000000000001,
+        0.9
+      ],
+      "localSpace": "uv",
+      "notes": "Placeholder grid; renumber after photographing the connector face."
+    },
+    {
+      "id": "CN106.1",
+      "object": "CN106",
+      "label": "1",
+      "local": [
+        0.05,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.2",
+      "object": "CN106",
+      "label": "2",
+      "local": [
+        0.11428571428571428,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.3",
+      "object": "CN106",
+      "label": "3",
+      "local": [
+        0.17857142857142855,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.4",
+      "object": "CN106",
+      "label": "4",
+      "local": [
+        0.24285714285714283,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.5",
+      "object": "CN106",
+      "label": "5",
+      "local": [
+        0.3071428571428571,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.6",
+      "object": "CN106",
+      "label": "6",
+      "local": [
+        0.37142857142857144,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.7",
+      "object": "CN106",
+      "label": "7",
+      "local": [
+        0.43571428571428567,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.8",
+      "object": "CN106",
+      "label": "8",
+      "local": [
+        0.5,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.9",
+      "object": "CN106",
+      "label": "9",
+      "local": [
+        0.5642857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.10",
+      "object": "CN106",
+      "label": "10",
+      "local": [
+        0.6285714285714287,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.11",
+      "object": "CN106",
+      "label": "11",
+      "local": [
+        0.692857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.12",
+      "object": "CN106",
+      "label": "12",
+      "local": [
+        0.7571428571428572,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.13",
+      "object": "CN106",
+      "label": "13",
+      "local": [
+        0.8214285714285714,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.14",
+      "object": "CN106",
+      "label": "14",
+      "local": [
+        0.8857142857142858,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.15",
+      "object": "CN106",
+      "label": "15",
+      "local": [
+        0.9500000000000001,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN106.A",
+      "object": "CN106",
+      "label": "A",
+      "local": [
+        0.05,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.B",
+      "object": "CN106",
+      "label": "B",
+      "local": [
+        0.11428571428571428,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.C",
+      "object": "CN106",
+      "label": "C",
+      "local": [
+        0.17857142857142855,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.D",
+      "object": "CN106",
+      "label": "D",
+      "local": [
+        0.24285714285714283,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.E",
+      "object": "CN106",
+      "label": "E",
+      "local": [
+        0.3071428571428571,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.F",
+      "object": "CN106",
+      "label": "F",
+      "local": [
+        0.37142857142857144,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.H",
+      "object": "CN106",
+      "label": "H",
+      "local": [
+        0.43571428571428567,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.J",
+      "object": "CN106",
+      "label": "J",
+      "local": [
+        0.5,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.K",
+      "object": "CN106",
+      "label": "K",
+      "local": [
+        0.5642857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.L",
+      "object": "CN106",
+      "label": "L",
+      "local": [
+        0.6285714285714287,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.M",
+      "object": "CN106",
+      "label": "M",
+      "local": [
+        0.692857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.N",
+      "object": "CN106",
+      "label": "N",
+      "local": [
+        0.7571428571428572,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.P",
+      "object": "CN106",
+      "label": "P",
+      "local": [
+        0.8214285714285714,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.R",
+      "object": "CN106",
+      "label": "R",
+      "local": [
+        0.8857142857142858,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN106.S",
+      "object": "CN106",
+      "label": "S",
+      "local": [
+        0.9500000000000001,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.1",
+      "object": "CN107",
+      "label": "1",
+      "local": [
+        0.05,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.2",
+      "object": "CN107",
+      "label": "2",
+      "local": [
+        0.11428571428571428,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.3",
+      "object": "CN107",
+      "label": "3",
+      "local": [
+        0.17857142857142855,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.4",
+      "object": "CN107",
+      "label": "4",
+      "local": [
+        0.24285714285714283,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.5",
+      "object": "CN107",
+      "label": "5",
+      "local": [
+        0.3071428571428571,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.6",
+      "object": "CN107",
+      "label": "6",
+      "local": [
+        0.37142857142857144,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.7",
+      "object": "CN107",
+      "label": "7",
+      "local": [
+        0.43571428571428567,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.8",
+      "object": "CN107",
+      "label": "8",
+      "local": [
+        0.5,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.9",
+      "object": "CN107",
+      "label": "9",
+      "local": [
+        0.5642857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.10",
+      "object": "CN107",
+      "label": "10",
+      "local": [
+        0.6285714285714287,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.11",
+      "object": "CN107",
+      "label": "11",
+      "local": [
+        0.692857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.12",
+      "object": "CN107",
+      "label": "12",
+      "local": [
+        0.7571428571428572,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.13",
+      "object": "CN107",
+      "label": "13",
+      "local": [
+        0.8214285714285714,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.14",
+      "object": "CN107",
+      "label": "14",
+      "local": [
+        0.8857142857142858,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.15",
+      "object": "CN107",
+      "label": "15",
+      "local": [
+        0.9500000000000001,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN107.A",
+      "object": "CN107",
+      "label": "A",
+      "local": [
+        0.05,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.B",
+      "object": "CN107",
+      "label": "B",
+      "local": [
+        0.11428571428571428,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.C",
+      "object": "CN107",
+      "label": "C",
+      "local": [
+        0.17857142857142855,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.D",
+      "object": "CN107",
+      "label": "D",
+      "local": [
+        0.24285714285714283,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.E",
+      "object": "CN107",
+      "label": "E",
+      "local": [
+        0.3071428571428571,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.F",
+      "object": "CN107",
+      "label": "F",
+      "local": [
+        0.37142857142857144,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.H",
+      "object": "CN107",
+      "label": "H",
+      "local": [
+        0.43571428571428567,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.J",
+      "object": "CN107",
+      "label": "J",
+      "local": [
+        0.5,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.K",
+      "object": "CN107",
+      "label": "K",
+      "local": [
+        0.5642857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.L",
+      "object": "CN107",
+      "label": "L",
+      "local": [
+        0.6285714285714287,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.M",
+      "object": "CN107",
+      "label": "M",
+      "local": [
+        0.692857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.N",
+      "object": "CN107",
+      "label": "N",
+      "local": [
+        0.7571428571428572,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.P",
+      "object": "CN107",
+      "label": "P",
+      "local": [
+        0.8214285714285714,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.R",
+      "object": "CN107",
+      "label": "R",
+      "local": [
+        0.8857142857142858,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN107.S",
+      "object": "CN107",
+      "label": "S",
+      "local": [
+        0.9500000000000001,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.1",
+      "object": "CN108",
+      "label": "1",
+      "local": [
+        0.05,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.2",
+      "object": "CN108",
+      "label": "2",
+      "local": [
+        0.11428571428571428,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.3",
+      "object": "CN108",
+      "label": "3",
+      "local": [
+        0.17857142857142855,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.4",
+      "object": "CN108",
+      "label": "4",
+      "local": [
+        0.24285714285714283,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.5",
+      "object": "CN108",
+      "label": "5",
+      "local": [
+        0.3071428571428571,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.6",
+      "object": "CN108",
+      "label": "6",
+      "local": [
+        0.37142857142857144,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.7",
+      "object": "CN108",
+      "label": "7",
+      "local": [
+        0.43571428571428567,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.8",
+      "object": "CN108",
+      "label": "8",
+      "local": [
+        0.5,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.9",
+      "object": "CN108",
+      "label": "9",
+      "local": [
+        0.5642857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.10",
+      "object": "CN108",
+      "label": "10",
+      "local": [
+        0.6285714285714287,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.11",
+      "object": "CN108",
+      "label": "11",
+      "local": [
+        0.692857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.12",
+      "object": "CN108",
+      "label": "12",
+      "local": [
+        0.7571428571428572,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.13",
+      "object": "CN108",
+      "label": "13",
+      "local": [
+        0.8214285714285714,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.14",
+      "object": "CN108",
+      "label": "14",
+      "local": [
+        0.8857142857142858,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.15",
+      "object": "CN108",
+      "label": "15",
+      "local": [
+        0.9500000000000001,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN108.A",
+      "object": "CN108",
+      "label": "A",
+      "local": [
+        0.05,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.B",
+      "object": "CN108",
+      "label": "B",
+      "local": [
+        0.11428571428571428,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.C",
+      "object": "CN108",
+      "label": "C",
+      "local": [
+        0.17857142857142855,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.D",
+      "object": "CN108",
+      "label": "D",
+      "local": [
+        0.24285714285714283,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.E",
+      "object": "CN108",
+      "label": "E",
+      "local": [
+        0.3071428571428571,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.F",
+      "object": "CN108",
+      "label": "F",
+      "local": [
+        0.37142857142857144,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.H",
+      "object": "CN108",
+      "label": "H",
+      "local": [
+        0.43571428571428567,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.J",
+      "object": "CN108",
+      "label": "J",
+      "local": [
+        0.5,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.K",
+      "object": "CN108",
+      "label": "K",
+      "local": [
+        0.5642857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.L",
+      "object": "CN108",
+      "label": "L",
+      "local": [
+        0.6285714285714287,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.M",
+      "object": "CN108",
+      "label": "M",
+      "local": [
+        0.692857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.N",
+      "object": "CN108",
+      "label": "N",
+      "local": [
+        0.7571428571428572,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.P",
+      "object": "CN108",
+      "label": "P",
+      "local": [
+        0.8214285714285714,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.R",
+      "object": "CN108",
+      "label": "R",
+      "local": [
+        0.8857142857142858,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN108.S",
+      "object": "CN108",
+      "label": "S",
+      "local": [
+        0.9500000000000001,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.1",
+      "object": "CN109",
+      "label": "1",
+      "local": [
+        0.05,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.2",
+      "object": "CN109",
+      "label": "2",
+      "local": [
+        0.11428571428571428,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.3",
+      "object": "CN109",
+      "label": "3",
+      "local": [
+        0.17857142857142855,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.4",
+      "object": "CN109",
+      "label": "4",
+      "local": [
+        0.24285714285714283,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.5",
+      "object": "CN109",
+      "label": "5",
+      "local": [
+        0.3071428571428571,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.6",
+      "object": "CN109",
+      "label": "6",
+      "local": [
+        0.37142857142857144,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.7",
+      "object": "CN109",
+      "label": "7",
+      "local": [
+        0.43571428571428567,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.8",
+      "object": "CN109",
+      "label": "8",
+      "local": [
+        0.5,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.9",
+      "object": "CN109",
+      "label": "9",
+      "local": [
+        0.5642857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.10",
+      "object": "CN109",
+      "label": "10",
+      "local": [
+        0.6285714285714287,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.11",
+      "object": "CN109",
+      "label": "11",
+      "local": [
+        0.692857142857143,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.12",
+      "object": "CN109",
+      "label": "12",
+      "local": [
+        0.7571428571428572,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.13",
+      "object": "CN109",
+      "label": "13",
+      "local": [
+        0.8214285714285714,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.14",
+      "object": "CN109",
+      "label": "14",
+      "local": [
+        0.8857142857142858,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.15",
+      "object": "CN109",
+      "label": "15",
+      "local": [
+        0.9500000000000001,
+        0.3
+      ],
+      "localSpace": "uv",
+      "side": "A"
+    },
+    {
+      "id": "CN109.A",
+      "object": "CN109",
+      "label": "A",
+      "local": [
+        0.05,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.B",
+      "object": "CN109",
+      "label": "B",
+      "local": [
+        0.11428571428571428,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.C",
+      "object": "CN109",
+      "label": "C",
+      "local": [
+        0.17857142857142855,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.D",
+      "object": "CN109",
+      "label": "D",
+      "local": [
+        0.24285714285714283,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.E",
+      "object": "CN109",
+      "label": "E",
+      "local": [
+        0.3071428571428571,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.F",
+      "object": "CN109",
+      "label": "F",
+      "local": [
+        0.37142857142857144,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.H",
+      "object": "CN109",
+      "label": "H",
+      "local": [
+        0.43571428571428567,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.J",
+      "object": "CN109",
+      "label": "J",
+      "local": [
+        0.5,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.K",
+      "object": "CN109",
+      "label": "K",
+      "local": [
+        0.5642857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.L",
+      "object": "CN109",
+      "label": "L",
+      "local": [
+        0.6285714285714287,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.M",
+      "object": "CN109",
+      "label": "M",
+      "local": [
+        0.692857142857143,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.N",
+      "object": "CN109",
+      "label": "N",
+      "local": [
+        0.7571428571428572,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.P",
+      "object": "CN109",
+      "label": "P",
+      "local": [
+        0.8214285714285714,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.R",
+      "object": "CN109",
+      "label": "R",
+      "local": [
+        0.8857142857142858,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    },
+    {
+      "id": "CN109.S",
+      "object": "CN109",
+      "label": "S",
+      "local": [
+        0.9500000000000001,
+        0.7
+      ],
+      "localSpace": "uv",
+      "side": "B"
+    }
+  ],
+  "components": [
+    {
+      "id": "B2.IC2",
+      "object": "B2",
+      "label": "IC2",
+      "part": "JRC 4558D",
+      "local": [
+        0.5,
+        0.5
+      ],
+      "status": "PHOTO",
+      "notes": "Position on face not set; drag into place."
+    },
+    {
+      "id": "B5.IC5",
+      "object": "B5",
+      "label": "IC5",
+      "part": "AD7512DIKN",
+      "local": [
+        0.5,
+        0.5
+      ],
+      "status": "PHOTO",
+      "notes": "Position on face not set; drag into place."
+    },
+    {
+      "id": "B1.RL1",
+      "object": "B1",
+      "label": "RL1",
+      "part": "relay 7921",
+      "local": [
+        0.5,
+        0.5
+      ],
+      "status": "PHOTO",
+      "notes": "Position on face not set; drag into place."
+    },
+    {
+      "id": "B1.RL2",
+      "object": "B1",
+      "label": "RL2",
+      "part": "relay 7921",
+      "local": [
+        0.5,
+        0.5
+      ],
+      "status": "PHOTO",
+      "notes": "Position on face not set; drag into place."
+    },
+    {
+      "id": "B20.SW1",
+      "object": "B20",
+      "label": "LENS/CAMERA toggle",
+      "part": "SPDT toggle",
+      "local": [
+        0.5,
+        0.5
+      ],
+      "status": "PHOTO",
+      "notes": "Position on face not set; drag into place."
+    }
+  ],
+  "measurements": [],
+  "nets": [],
+  "photos": [
+    {
+      "id": "065258",
+      "file": "photos/065258.jpg",
+      "object": "B7",
+      "note": "Terminal board with signal names"
+    },
+    {
+      "id": "065441",
+      "file": "photos/065441.jpg",
+      "object": "B5",
+      "note": "System board, straight on"
+    },
+    {
+      "id": "065524",
+      "file": "photos/065524.jpg",
+      "object": "B3",
+      "note": "Door board, CMOS logic"
+    },
+    {
+      "id": "065529",
+      "file": "photos/065529.jpg",
+      "object": "B4",
+      "note": "Door board, CMOS + trimpots"
+    },
+    {
+      "id": "065548",
+      "file": "photos/065548.jpg",
+      "object": "B2",
+      "note": "Door board, op-amps"
+    },
+    {
+      "id": "065541",
+      "file": "photos/065541.jpg",
+      "object": "B1",
+      "note": "Door board, relays and caps"
+    },
+    {
+      "id": "065430",
+      "file": "photos/065430.jpg",
+      "object": "B6",
+      "note": "Small regulator board on 5403.793 socket"
+    },
+    {
+      "id": "065307",
+      "file": "photos/065307.jpg",
+      "object": "B20",
+      "note": "LENS/CAMERA toggle board and zoom barrel scale"
+    },
+    {
+      "id": "065246",
+      "file": "photos/065246.jpg",
+      "object": "BAY-F",
+      "note": "Front bay with zoom cam barrel"
+    },
+    {
+      "id": "065635",
+      "file": "photos/065635.jpg",
+      "object": "DOOR-L",
+      "note": "Silkscreen board/connector map"
+    },
+    {
+      "id": "065734",
+      "file": "photos/065734.jpg",
+      "object": "BAY-R",
+      "note": "Power unit, fuses"
+    },
+    {
+      "id": "065816",
+      "file": "photos/065816.jpg",
+      "object": "PU",
+      "note": "Power unit, toroid and cans"
+    },
+    {
+      "id": "032703",
+      "file": "photos/032703.jpg",
+      "object": "BODY",
+      "note": "Both sides open, overview"
+    }
+  ],
+  "viewRequests": [
+    {
+      "id": "vr-001",
+      "from": "claude",
+      "camera": {
+        "position": [
+          -400,
+          80,
+          200
+        ],
+        "target": [
+          -122,
+          0,
+          200
+        ]
+      },
+      "highlight": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "question": "Which physical board carries which stencil number? I assigned B3 top-left, B4 top-right, B2 bottom-left, B1 bottom-right by component type. Please confirm from the number printed near each card edge.",
+      "status": "open",
+      "created": "2026-09-22T08:26:48.114927+00:00",
+      "tour": true
+    },
+    {
+      "id": "vr-002",
+      "from": "claude",
+      "camera": {
+        "position": [
+          300,
+          60,
+          -250
+        ],
+        "target": [
+          60,
+          -60,
+          0
+        ]
+      },
+      "highlight": [
+        "CAM50"
+      ],
+      "question": "Photograph the CAM50 face with the keyway visible and tell me the numbering scheme you used, so the placeholder grid can be corrected.",
+      "status": "open",
+      "created": "2026-09-22T08:26:48.114927+00:00"
+    },
+    {
+      "id": "vr-003",
+      "from": "claude",
+      "camera": {
+        "position": [
+          350,
+          50,
+          200
+        ],
+        "target": [
+          105,
+          0,
+          200
+        ]
+      },
+      "highlight": [
+        "PU"
+      ],
+      "question": "The toroid is marked 240V. Is that a primary tap (mains into the lens) or a secondary? Trace the toroid leads to the fuse block and to CAM50 before any power goes on.",
+      "status": "open",
+      "created": "2026-09-22T08:26:48.114927+00:00"
+    }
+  ]
+}
